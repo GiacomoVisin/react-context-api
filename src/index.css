@@ -1,0 +1,24 @@
+@import url('bootstrap');
+@import url('bootstrap-icons');
+
+.navlink{
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    height: 500px;
+    display: flex;
+
+}
+
+.navlink.active{
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.center{
+    position:relative;
+    left: 50%;
+    transform: translate(-50%);
+}
