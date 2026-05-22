@@ -8,6 +8,12 @@ export default function NavBar() {
 
     const { budgetMode, setBudgetMode } = useContext(BudgetContext)
 
+    function Toggle(){
+        setBudgetMode(() =>(!budgetMode))
+        console.log(budgetMode);
+        
+    }
+
     return (
 
         <nav style={{ display: "flex", gap: "15px", padding: "10px", background: "#eee" }}>
@@ -16,6 +22,8 @@ export default function NavBar() {
             <NavLink to="/chi-siamo" className="navlink"> Chi Siamo</NavLink>
 
             <NavLink to="/prodotti" className="navlink"> Prodotti </NavLink>
+
+            <button onClick={Toggle}> { budgetMode? `Disattiva modalita Budget` : `Attiva Modalita budget`}  </button>
         </nav>
     
     
