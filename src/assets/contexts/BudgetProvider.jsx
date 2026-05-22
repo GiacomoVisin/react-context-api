@@ -4,7 +4,7 @@ export const BudgetContext = createContext()
 
 export function BudgetProvider({ children }) {
 
-    const [budgetMode, setBudgetMode] = useState(true)
+    const [budgetMode, setBudgetMode] = useState(null)
 
     return (
         <BudgetContext.Provider value={{ budgetMode, setBudgetMode }}>
