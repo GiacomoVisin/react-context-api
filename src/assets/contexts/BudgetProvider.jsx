@@ -3,11 +3,11 @@ import { createContext, useState } from "react"
 export const BudgetContext = createContext()
 
 export function BudgetProvider({ children }) {
-
-    const [budgetMode, setBudgetMode] = useState(null)
+  
+    const [maxPrice,setMaxPrice] = useState(0)
 
     return (
-        <BudgetContext.Provider value={{ budgetMode, setBudgetMode }}>
+        <BudgetContext.Provider value={{ maxPrice, setMaxPrice }}>
             {children}
         </BudgetContext.Provider>
     )
